@@ -1,0 +1,35 @@
+package pages;
+
+import wrappers.OpentapsWrappers;
+
+public class EditLeadsPage extends OpentapsWrappers {
+	public EditLeadsPage selectSource(String SelectSource) {
+		// enterById(prop.getProperty("Login.UserName.Id"), data);
+		selectById(prop.getProperty("Editlead.selectsource.Id"), SelectSource);
+		return this;
+	}
+
+	public EditLeadsPage clickAddsource() {
+		// enterById(prop.getProperty("Login.UserName.Id"), data);
+		clickByXpath(prop.getProperty("Editlead.clickAddSource.xpath"));
+		return this;
+	}
+
+	public EditLeadsPage selectMarketingcampaign(String MarketingCampaign) {
+		// enterById(prop.getProperty("Login.UserName.Id"), data);
+		selectById(prop.getProperty("Editlead.selectMarketingcampaign.Id"), MarketingCampaign);
+		return this;
+	}
+
+	public EditLeadsPage clickAddmarketingCampaign() {
+		// enterById(prop.getProperty("Login.UserName.Id"), data);
+		clickByXpath(prop.getProperty("Editlead.clickAddmarketingCampaign.xpath"));
+		return this;
+	}
+
+	public ViewLead clickUpdate() {
+		clickByName(prop.getProperty("Editlead.clickUpdate.Xpath"));
+		return new ViewLead();
+	}
+
+}

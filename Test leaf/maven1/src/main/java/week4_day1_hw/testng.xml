@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Wrapper_Methods" parallel="none">
+  <test name="CreateLead">
+  <classes>
+  <class name="week4_day1_hw.Testcase_testng"/>
+  </classes>
+  </test>
+  <test name="EditLead">
+  <classes>
+  <class name="week4_day1_hw.EditLead"/>
+  </classes>
+  </test>
+  <test name="MergeLead">
+  <classes>
+  <class name="week4_day1_hw.MergeLead"/>
+  </classes>
+  </test>
+  <test name="DeleteLead">
+  <classes>
+  <class name="week4_day1_hw.DeleteLead"/>
+  </classes>
+  </test>
+</suite> 

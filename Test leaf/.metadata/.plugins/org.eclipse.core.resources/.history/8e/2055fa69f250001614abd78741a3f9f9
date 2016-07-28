@@ -1,0 +1,41 @@
+package week7;
+
+public class OccurancesHW {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+String check = "Cognizantn";
+		
+		// Solution 1
+		
+		// Find the length of the String :{{length}}
+		// Move to each character item :{{charAt[i]}}
+		// Check if it has the expected character, if yes -> count ++
+		
+		int occuranceOfN = 0;
+		char[] charArray = check.toCharArray();
+		for (char c : charArray) {
+			// don't use equals here
+			if(c=='n'){
+				occuranceOfN ++;
+			}
+		}		
+		
+		System.out.println("Occurance of n is :" +occuranceOfN);
+		
+		
+		
+		int occurance = 0;
+		for (int i=0; i<check.length(); i ++) {
+			// don't use equals here
+			if(check.charAt(i)=='n'){
+				occurance ++;
+			}
+		}		
+		
+		System.out.println("Occurance of n is :" +occurance);
+		
+	}
+
+}

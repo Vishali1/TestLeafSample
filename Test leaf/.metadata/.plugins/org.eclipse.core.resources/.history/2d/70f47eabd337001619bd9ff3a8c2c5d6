@@ -1,0 +1,34 @@
+package week2;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Trypopup {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","./Drivers/chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("http://popuptest.com/");
+		//Maximise Firefox
+		driver.manage().window().maximize();
+		
+		//Implicit wait(Default Timeout)
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		driver.findElementByLinkText("Multi-PopUp Test #2").click();
+		
+		String parent = driver.getWindowHandle();
+
+        Set<String> pops=driver.getWindowHandles();
+        {
+        Iterator<String> it =pops.iterator();
+        while (it.hasNext()) {
+
+            String popupHandle=it.next().toString();
+            if(!popupHandle.contains(parent))
+            {
+            driver.switchTo().window(popupHandle);
+            System.out.println("Popu Up Title: "+ driver.switchTo().window(popupHandle).getTitle());
+            driver.close();

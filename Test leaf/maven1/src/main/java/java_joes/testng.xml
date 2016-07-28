@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite1" parallel="none">
+  <test name="PrashanthLifeCycle">
+  <classes>
+  <class name="java_joes.PrashanthLifeCycle"/>
+  <class name="java_joes.SwathiLifeCycle"/>
+  </classes>
+  </test>
+</suite> 

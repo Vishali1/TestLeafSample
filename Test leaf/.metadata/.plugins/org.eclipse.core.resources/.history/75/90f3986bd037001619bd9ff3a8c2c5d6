@@ -1,0 +1,22 @@
+package week2;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Week2_Popup {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","./Drivers/chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("http://demo1.opentaps.org");
+		//Maximise Firefox
+		driver.manage().window().maximize();
+		
+		//Implicit wait(Default Timeout)
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+	}
+
+}

@@ -1,0 +1,64 @@
+#Page.ObjectName.Locator=valuegivenbydeveloper
+
+# Login Page Objects
+Login.UserName.Id=username
+Login.Password.Id=password
+Login.LoginButton.Class=decorativeSubmit
+Login.Error.Xpath=//*[@id='errorDiv']
+
+# Home Page Objects
+Home.UserName.Xpath=//div[@id='form']/h2
+Home.Logout.Class=decorativeSubmit
+Home.CRMSFA.Link=CRM/SFA
+
+# CRM Page Objects
+CRMHome.Leads.link=Leads
+
+
+# MyLead Page Objects
+MyLead.CreateLead.linktext=Create Lead
+MyLead.FindLeads.Linktext=Find Leads
+MyLead.MergeLeads.Linktext=Merge Leads
+
+# Create Lead Page Objects
+CreateLeadPage.CompanyName.ID=createLeadForm_companyName
+CreateLeadPage.FirstName.ID=createLeadForm_firstName
+CreateLeadPage.LastName.ID=createLeadForm_lastName
+CreateLeadPage.source.ID=createLeadForm_dataSourceId
+CreateLeadPage.marketingCampaign.Id=createLeadForm_marketingCampaignId
+CreateLeadPage.Submit.Xpath=//input[@value ='Create Lead']
+
+# Edit Lead
+Editlead.clickedit.link=Edit
+Editlead.selectSource.Id=addDataSourceForm_dataSourceId
+Editlead.clickAddSource.xpath=(//input[@value='Add'])[1]
+Editlead.selectMarketingcampaign.Id=addMarketingCampaignForm_marketingCampaignId
+Editlead.clickAddmarketingCampaign.xpath=(//input[@value='Add'])[2]
+Editlead.clickUpdate.class=smallSubmit
+
+
+#View Lead Page Objects
+ViewLead.Edit.Xpath=//div[@class='form']/preceding::a[2]
+ViewLead.DeleteButton.ClassName=subMenuButtonDangerous
+ViewLead.FirstName.Id=viewLead_firstName_sp
+ViewLead.Sources.Id=viewLead_dataSources_sp
+ViewLead.marketingCampaigns.Id=viewLead_marketingCampaigns_sp
+
+#Find Lead Page Objects
+FindLeads.FirstName.Xpath=(//div[@class='x-form-item x-tab-item']/following::input)[1]
+FindLeads.PhoneTab.Xpath=//span[contains(text(),'Phone')]
+FindLeads.PhoneNumber.Name=phoneNumber
+FindLeads.FindLeadsbutton.Xpath=//button[contains(text(),'Find Leads')]
+FindLeads.clickFirstResultingLead.Xpath=(//div[@class='x-grid3-cell-inner x-grid3-col-partyId'])[1]
+FindLeads.verifyText.Xpath=//div[contains(text(),'No records to display')]
+
+#Merge Lead Page Objects
+MergeLead.FromLeadIcon.Xpath=(//img[@src='/images/fieldlookup.gif'])[1]
+MergeLead.ToLeadIcon.Xpath=(//img[@src='/images/fieldlookup.gif'])[2]
+MergeLead.Merge.link=Merge
+
+
+#FindMergeLeads page Objects
+FindMergeLeads.firstname.name=firstName
+FindMergeLeads.FindLead.Xpath=//button[contains(text(),'Find Leads')]
+FindMergeLeads.firstresult.Xpath=(//a[@class='linktext'])[1]
