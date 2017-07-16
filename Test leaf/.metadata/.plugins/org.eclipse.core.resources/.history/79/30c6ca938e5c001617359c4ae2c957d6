@@ -1,0 +1,16 @@
+package collections;
+
+import java.util.ArrayList;
+
+public class SortArrayList {
+
+	public void sortArrayListAscendingDescending(){
+		 ArrayList<Integer> countryList=new ArrayList<Integer>();
+		 countryList.add(10);
+		 countryList.add(15);
+		 countryList.add(12);
+		 countryList.add(11);
+		 countryList.add(6);
+		 
+	}
+}

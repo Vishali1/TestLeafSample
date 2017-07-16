@@ -1,0 +1,31 @@
+package collections;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class GetDuplicateCountInaList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+List<String> mentors = new ArrayList<String>();
+		
+		String findDups = "Kader";
+
+		// Add mentors to the set -- Note the order
+		mentors.add("Kader");
+		mentors.add("Gopi");
+		mentors.add("Nesa");
+		mentors.add("Bharath");
+		mentors.add("Karim");
+		mentors.add("Kader");
+		mentors.add("Sakthi");
+		Set<String> uniqueSet = new HashSet<String>(mentors);
+		for (String temp : uniqueSet) {
+			System.out.println(temp + ": " + Collections.frequency(mentors, temp));
+		}
+	}
+
+}

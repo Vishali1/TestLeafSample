@@ -1,0 +1,44 @@
+package week2;
+
+import io.appium.java_client.android.AndroidDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class Open_gmail {
+	AndroidDriver<WebElement> driver=null;
+	
+	 @BeforeMethod
+	 public void setUp() throws MalformedURLException{
+		 	DesiredCapabilities capabilities=new DesiredCapabilities();
+		 	capabilities.setCapability("deviceName", "Moto E³ POWER");
+			capabilities.setCapability("appPackage","com.google.android.gm");
+			capabilities.setCapability("appActivity", "com.google.android.gm.ConversationListActivityGmail");
+			driver=new AndroidDriver<WebElement>(new URL("http://127.0.0.1:5000/wd/hub"), capabilities);
+	 
+	 }
+	 @Test
+	 public void openGmail() throws InterruptedException{
+		Thread.sleep(3000);
+		driver.findElementById("com.google.android.gm:id/search").click();
+		Thread.sleep(3000);
+		driver.findElementById("com.google.android.gm:id/search_actionbar_query_text").sendKeys("jabong");
+		driver.findElementById("com.google.android.gm:id/compose_button").click();
+		driver.findElementByClassName("android.view.View");
+		driver.longPressKeyCode(5000);
+		Thread.sleep(3000);
+	 }
+	
+	 @AfterMethod
+	 public void tearDown(){
+		 driver.quit();
+	 }
+	
+
+}

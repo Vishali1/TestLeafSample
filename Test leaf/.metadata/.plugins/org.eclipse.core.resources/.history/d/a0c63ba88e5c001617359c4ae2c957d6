@@ -1,0 +1,27 @@
+package collections;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class SortArrayList {
+
+	public void sortArrayListAscendingDescending(){
+		 ArrayList<Integer> numberList=new ArrayList<Integer>();
+		 numberList.add(10);
+		 numberList.add(15);
+		 numberList.add(12);
+		 numberList.add(11);
+		 numberList.add(6);
+		 System.out.println("Before Sorting:");     
+		 for(Integer counter: numberList){
+			 System.out.println(counter);
+		 }
+		 /* Sort statement*/
+		 Collections.sort(numberList);
+		 /* Sorted List*/
+		   System.out.println("After Sorting:");
+		   for(Integer counter: numberList){
+				System.out.println(counter);
+		   }
+	}
+}

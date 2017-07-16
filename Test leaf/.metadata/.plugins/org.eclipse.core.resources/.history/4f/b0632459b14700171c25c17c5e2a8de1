@@ -1,0 +1,30 @@
+package testleaf;
+
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Verify_dropdownvalue_selected {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FirefoxDriver driver = new FirefoxDriver();
+		driver.get("http://www.amazon.in/");
+
+		// Maximise Firefox
+		driver.manage().window().maximize();
+
+		// Implicit wait(Default Timeout)
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		Select dropdown = new Select(driver.findElementById("searchDropdownBox"));
+		dropdown.selectByVisibleText("Gift Cards");
+
+		WebElement option = dropdown.getFirstSelectedOption();
+		System.out.println(option.getText());
+
+		driver.close();
+	}
+
+}

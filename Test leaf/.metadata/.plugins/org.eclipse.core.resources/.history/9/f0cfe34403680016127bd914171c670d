@@ -1,0 +1,67 @@
+package testleaf;
+
+import java.io.File;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Week2ClassWorkDay1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
+		ChromeDriver driver=new ChromeDriver();
+		// Open URL
+				driver.get("https://www.google.co.in/");
+				
+				//Mam FF
+				driver.manage().window().maximize();
+				
+				//set time
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				
+				driver.findElementById("lst-ib").sendKeys("Sivakumar",Keys.ENTER);
+				//driver.findElementById("sfdiv").click();
+				
+				Thread.sleep(3000);
+				
+				System.out.println("the Title is =" + driver.getTitle());
+				
+				List<WebElement> allLinks = driver.findElementsByTagName("a");
+				
+				System.out.println("No. Of Links =" + allLinks.size());
+				
+				System.out.println("Colour of link 10 " + allLinks.get(9).getCssValue("color"));
+				
+				//driver.findElementsByTagName("a")
+				
+				System.out.println(allLinks.get(0));
+				
+				for (WebElement eachLink : allLinks) 
+					
+				{
+				System.out.println("Each link" +eachLink);
+				
+				
+					if (eachLink.getSize().getWidth()>20) 
+					{
+						System.out.println(eachLink.getText());	
+					}
+					
+		 
+				}
+				
+
+							
+				File snap = driver.getScreenshotAs(OutputType.FILE);
+				FileUtils.copyFile(snap, new File("./Screenshot/Snap1.jpeg"));
+				driver.close();
+	}
+	}
+
+}

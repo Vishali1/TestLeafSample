@@ -1,0 +1,31 @@
+package my_java;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class ReverseArrayList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ArrayList<String> list=new ArrayList();
+		
+		list.add("vishali");
+		list.add("sireesha");
+		list.add("Yalini");
+		list.add("Niveditha");
+		
+		System.out.println("ArrayList before reversing");
+		
+		System.out.println(list);
+		
+		Collections.reverse(list);
+		
+		System.out.println("ArrayList after reversing the list");
+		
+		System.out.println(list);
+		
+		
+	}
+
+}

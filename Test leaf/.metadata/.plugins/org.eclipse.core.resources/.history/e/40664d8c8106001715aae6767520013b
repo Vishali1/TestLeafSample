@@ -1,0 +1,28 @@
+package week2;
+
+import io.appium.java_client.android.AndroidDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class WeeK2_HW1 {
+
+	public static void main(String[] args) throws MalformedURLException, InterruptedException {
+		// TODO Auto-generated method stub
+		
+		
+		DesiredCapabilities capabilities=new DesiredCapabilities();
+		AndroidDriver<WebElement> driver=null;
+		driver=new AndroidDriver<WebElement>(new URL("http://127.0.0.1:5000/wd/hub"), capabilities);
+		capabilities.setCapability("deviceName", "Moto E³ POWER");
+		capabilities.setCapability("appPackage","com.testleaf.leaforg");
+		capabilities.setCapability("appActivity", "com.testleaf.leaforg.MainActivity");
+		Thread.sleep(3000);
+		driver.pressKeyCode(4);
+		
+	}
+
+}
