@@ -1,7 +1,10 @@
 package collections;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class GetDuplicateCountInaList {
 
@@ -19,7 +22,12 @@ List<String> mentors = new ArrayList<String>();
 		mentors.add("Karim");
 		mentors.add("Kader");
 		mentors.add("Sakthi");
+		Set<String> uniqueSet = new HashSet<String>(mentors);
+		for (String temp : uniqueSet) {
+			System.out.println(temp + ": " + Collections.frequency(mentors, temp));
+		}
 		
+
 	}
 
 }

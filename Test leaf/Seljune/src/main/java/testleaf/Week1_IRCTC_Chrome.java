@@ -15,7 +15,7 @@ public class Week1_IRCTC_Chrome {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver","D:\\LocalData\\z010884\\My softwares\\Saravanan selenium training\\Selenium Materials\\Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
 driver.get("https://www.irctc.co.in/eticketing/userSignUp.jsf");
 driver.manage().window().maximize();
