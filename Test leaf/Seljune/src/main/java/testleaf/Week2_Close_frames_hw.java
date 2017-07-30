@@ -45,7 +45,7 @@ public class Week2_Close_frames_hw {
 		
 	
 		
-		//driver.close();
+		driver.close();
 		
 		
 		

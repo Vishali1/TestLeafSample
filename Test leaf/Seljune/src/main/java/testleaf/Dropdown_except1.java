@@ -9,7 +9,7 @@ public class Dropdown_except1 {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver","./Drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("http://temre701.intra.renault.fr/tem/home.do?return=true");
 		driver.findElement(By.name("j_username")).sendKeys("z010884");
